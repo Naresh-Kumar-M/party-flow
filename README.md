@@ -24,7 +24,7 @@ $ $ bin/kafka-topics.sh --create --topic party-validation-request --bootstrap-se
 $ $ bin/kafka-topics.sh --create --topic party-validation-response --bootstrap-server localhost:9092
 $ $ bin/kafka-topics.sh --create --topic party-notification --bootstrap-server localhost:9092
 ```
-- Start Party, Validation and Notification service by running following command on the respective project directories
+- Start Party, Validation and Notification service by running following command on the respective project directories. (Note : for notification service, change the values for email id and password in applicationproperties.yaml https://github.com/nareshm87/party-flow/blob/master/notification/src/main/resources/application.yaml)
 ```sh
 $ mvn spring-boot:run
 ```
