@@ -29,3 +29,33 @@ $ $ bin/kafka-topics.sh --create --topic party-notification --bootstrap-server l
 $ mvn spring-boot:run
 ```
 ## How to use 
+- create party request 
+ ```sh
+   POST http://localhost:8444/party/
+   {
+    "firstName" : "Naresh",
+    "lastName" : "Kumar",
+    "address" : " SLR",
+    "email" : "naresh@gmail.com",
+    "contactNumber" : "973998696"
+   }
+   ```
+- list all party requests
+```sh
+  GET http://localhost:8444/party/requests
+  ```
+- approve party creation request
+ 
+```sh
+  POST http://localhost:8444/party/approval/{requestId}/success
+  ```
+   requestId - request id returned upon create party request
+   - deny party creation request
+   ```sh
+  POST http://localhost:8444/party/approval/{requestId}/fail
+  ```
+  requestId - request id returned upon create party request
+- list all parties 
+```sh
+   GET http://localhost:8444/party/
+ ```
