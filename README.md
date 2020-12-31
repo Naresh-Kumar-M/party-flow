@@ -40,6 +40,7 @@ $ mvn spring-boot:run
     "contactNumber" : "973998696"
    }
    ```
+   Note : email is unique field, request with existing email will be marked as duplicate request.
 - list all party requests
 ```sh
   GET http://localhost:8444/party/requests
