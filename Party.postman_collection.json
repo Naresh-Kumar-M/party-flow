@@ -1,0 +1,169 @@
+{
+	"info": {
+		"_postman_id": "f51357df-3772-4074-8abc-09f8af5c3146",
+		"name": "Party",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8444/party/",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\" : \"Naresh\",\r\n    \"lastName\" : \"Kumar\",\r\n    \"address\" : \"Koncept SLR\",\r\n    \"email\" : \"naresh.m87@gmail.com\",\r\n    \"contactNumber\" : \"9739846696\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8444/party/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8444",
+					"path": [
+						"party",
+						""
+					]
+				},
+				"description": "Create party request"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8444/party/requests",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\" : \"Naresh\",\r\n    \"lastName\" : \"Naresh\",\r\n    \"address\" : \"Naresh\",\r\n    \"contactNumber\" : \"Naresh\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8444/party/requests",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8444",
+					"path": [
+						"party",
+						"requests"
+					]
+				},
+				"description": "get all party creation requests"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8444/party/approval/8dfd275c-2572-49da-9a6e-8aec007c8adc/fail",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8444/party/approval/8dfd275c-2572-49da-9a6e-8aec007c8adc/fail",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8444",
+					"path": [
+						"party",
+						"approval",
+						"8dfd275c-2572-49da-9a6e-8aec007c8adc",
+						"fail"
+					]
+				},
+				"description": "deny approval request"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8444/party/approval/8dfd275c-2572-49da-9a6e-8aec007c8adc/success",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8444/party/approval/8dfd275c-2572-49da-9a6e-8aec007c8adc/success",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8444",
+					"path": [
+						"party",
+						"approval",
+						"8dfd275c-2572-49da-9a6e-8aec007c8adc",
+						"success"
+					]
+				},
+				"description": "approve party creation request"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8444/party/",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\" : \"Naresh\",\r\n    \"lastName\" : \"Naresh\",\r\n    \"address\" : \"Naresh\",\r\n    \"contactNumber\" : \"Naresh\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8444/party/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8444",
+					"path": [
+						"party",
+						""
+					]
+				},
+				"description": "Get All parties"
+			},
+			"response": []
+		}
+	]
+}

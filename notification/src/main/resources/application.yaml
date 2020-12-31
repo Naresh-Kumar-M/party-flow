@@ -1,0 +1,27 @@
+server:
+  port : 7444
+  servlet: 
+    context-path: /notification
+
+spring:
+  mail:
+    default-encoding: UTF-8
+    host: smtp.gmail.com
+    username: naresh@gmail.com
+    password: secret
+    port: 587
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+    protocol: smtp
+    test-connection: false
+  kafka:
+    bootstrap-servers: localhost:9092
+    consumer:
+      group-id: notification-request
+
+notification-service:
+  topic-name: party-notification

@@ -1,0 +1,19 @@
+
+server:
+  port : 9444
+  servlet: 
+    context-path: /validation
+
+spring:
+  kafka:
+    bootstrap-servers: localhost:9092
+    consumer:
+      group-id: validation-request
+
+validation-service:
+  request:
+    topic-name: party-validation-request
+  response:
+    topic-name: party-validation-response
+
+

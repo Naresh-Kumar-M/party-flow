@@ -1,0 +1,5 @@
+package com.example.notification.event;
+
+public enum RequestStatus {
+  INITIATED, ADDRESS_VALIDATED, DUPLICATE_REQUEST, AWAITING_APPROVAL, APPROVAL_SUCCESS, APPROVAL_FAILED, SUCCESS
+}
